@@ -139,7 +139,7 @@
     for (let i = pipes.length - 1; i >= 0; i--) {
       const p = pipes[i];
       p.x -= PIPE_SPEED * step;
-      if (!p.passed && p.x + PIPE_WIDTH < bird.x) {
+      if (!p.passed && p.x + PIPE_WIDTH < bird.x - BIRD_RADIUS) {
         p.passed = true;
         score++;
       }
