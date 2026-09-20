@@ -1,4 +1,4 @@
-# hello-world
+# Flappy bird game clone
 
 A self-contained Flappy Bird clone built with HTML5 Canvas and vanilla JavaScript — no libraries, frameworks, or build tools.
 
