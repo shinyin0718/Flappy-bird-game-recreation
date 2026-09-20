@@ -57,7 +57,11 @@
   let state = State.START;
   let bird, pipes, score, highScore, lastPipeTime, groundOffset, lastTime;
 
-  highScore = parseInt(localStorage.getItem(HIGH_SCORE_KEY), 10) || 0;
+  try {
+    highScore = parseInt(localStorage.getItem(HIGH_SCORE_KEY), 10) || 0;
+  } catch (e) {
+    highScore = 0;
+  }
 
   function reset() {
     bird = { x: W * 0.3, y: H / 2, vy: 0, rotation: 0 };
